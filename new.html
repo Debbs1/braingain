@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+<style>
+    *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Rubik';
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.top-nav{
+    background: rgb(235, 233, 233);
+    height: 60px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    box-shadow: rgb(238, 238, 238);
+  }
+
+.top-nav .hamburger{
+	font-size: 25px;
+	cursor: pointer;
+	color: #233816;
+}
+
+.top-navbar .hamburger:hover{
+	background-color: #fbfbfb;
+    z-index: 0.5;
+}
+
+
+.main-container .sidenav {
+  height: 100%;
+  width: 225px;
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+  background-color: #406529;
+transition: all 0.3s ease;
+}
+
+.main-container{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+.sidenav a, .dropdown-btn {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffff;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  align-items: center;
+  margin-bottom: 1px;
+    transition: all 0.3s ease;
+
+}
+
+.sidenav a.active, .dropdown-btn.active {
+  background-color: #ffff;
+  color: #406529;
+  margin-left: 5%;
+  border-top-left-radius:28px ;
+  border-bottom-left-radius: 28px;
+  overflow: hidden;
+}
+.sidenav a:hover ,.dropdown-btn:hover{
+    background-color: #385824;
+  color: rgb(240, 240, 240);
+  overflow: hidden;
+}
+.main {
+  padding: 10px;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #5e923e;
+  margin-left: 5%;
+}
+.main-container .sidenav .profile{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 20px 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+  .main-container .sidenav .profile .img{
+    padding: 0 18px;
+  }
+  .main-container .sidenav .profile img{
+     width: 45px;
+  }
+  .main-container .sidenav .profile p:first-child{
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  .main-container .sidenav .profile .sub_info{
+    font-size: 12px;
+    color: #fff;
+  }
+.fa-caret-down {
+  float: middle;
+  padding-right: 8px;
+}
+.icon{
+    margin-right: 15px;
+    font-size: 30px;
+  }
+
+
+@media only screen and (min-width:992px){
+    .top-nav{
+        display: none;
+    }
+    .main-container{
+        width: 100%;
+        height: 100%;
+        top:0;
+    }
+    .main-container .sidenav{
+        position: fixed;
+        margin-top: 0;
+        top: 0;
+        left: 0;
+        width: 225px;
+        height: 100%;
+        background: #406529;
+        transition: all 0.3s ease;
+    }
+    .main-container .container{
+        margin-top: 0;
+        width: calc(100% - 225px);
+        margin-left: 225px;
+        padding: 30px;
+        transition: all 0.3s ease;
+      }
+    
+}
+</style>
+</head>
+<body>
+    <div class="wrapper hover_collapse">
+        <div class="top-nav">
+            <div class="menu">
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+    
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="sidenav">
+                <div class="profile">
+                    <div class="img">
+                        <img alt="profile picture" src="assets/Avatar.png">
+                    </div>
+                    <div class="profile_info">
+                        <p class="profile_name"><strong>Deborah Inyang</strong></p>
+                        <p class="sub_info">
+                            <span class="user_role">[Student]</span><br>
+                            <span class="refference_code">Refference Code: 12345</span><br>
+                            <span class="user_status">Online</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="dropdown-btn"><img src="assets/HomeIcon.png" alt="" class="icon">Dashboard
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">My Dashboard</a>
+                    <a href="#">Educational Games</a>
+                  </div>
+                  <button class="dropdown-btn"><img src="assets/Questions.png" alt="" class="icon">Academics
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Skills Practice</a>
+                    <a href="#">Past Questions</a>
+                    <a href="#">Past Questions [Exam]</a>
+                    <a href="#">E-Library</a>
+                  </div>
+                  <button class="dropdown-btn"><img src="assets/Skill.png" alt="" class="icon">Accounts
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Subscription</a>
+                    <a href="#">Income</a>
+                    <a href="#">Withdrawals</a>
+                    <a href="#">Payment</a>
+                  </div>
+                  <button class="dropdown-btn"><img src="assets/lib.png" alt="" class="icon">Personal
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Profile</a>
+                    <a href="#">Change Password</a>
+                    <a href="#">Affiliates/Refferals</a>
+                    <a href="#">Question Archives</a>
+                    <a href="#">Bank Details</a>
+                  </div>
+          </div>
+            <div class="main">
+                <h5>BraingainSpa provides students with materials with which they can be well prepared to get excellent results in their Class Tests and Examinations, and ultimately in their individual careers.
+                    In addition,You can get Rewarded for Outstanding Performances</h5>
+            </div>
+        </div>
+    </div>
+
+<script>
+//for sub menu drop down
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+//for mobile menu
+$('.menu').click(function(){
+      $(this).toggleClass("click");
+      $('.sidenav').toggleClass("show");
+    });
+      $('.dropdown-btn').click(function(){
+        $('dropdown-container').toggleClass("show");
+      });
+      $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Rubik';
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.top_nav{
+    background: #80CBC4;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+.main_container .sidebar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: #406529;
+    transition: all 0.3s ease;
+}
+.main_container .sidebar .sidebar__inner{
+    position: relative;
+  }
+  .main_container .sidebar .profile{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 20px 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+  .main_container .sidebar .profile .img{
+    padding: 0 18px;
+  }
+  
+  .main_container .sidebar .profile img{
+     width: 45px;
+  }
+  .main_container .sidebar .profile p:first-child{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  .main_container .sidebar .profile .sub_info{
+    font-size: 12px;
+    color: #fff;
+  }
+  .main_container .sidebar ul li a{
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 25px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+    transition: all 0.3s ease;
+  }
+  .main_container .sidebar ul li a .icon{
+    margin-right: 15px;
+    font-size: 28px;
+  }
+  .main_container .sidebar ul li a span{
+    display: inline-block;
+  }
+  .main_container .sidebar ul li a:hover,
+.main_container .sidebar ul li a.active{
+  background: #fff;
+  color: #406529;
+  margin-left: 5%;
+  border-top-left-radius:28px ;
+  border-bottom-left-radius: 28px;
+  
+}
+ .main_container .container{
+    margin-top: 60px;
+    width: calc(100% - 25%);
+    margin-left: 225px;
+    padding: 30px;
+    transition: all 0.3s ease;
+  }
+ /*  .main_container .container .item{
+    background: #fff;
+    border: 1px solid #E0F2F1;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 22px;
+  }*/
+  @media only screen and (min-width:992px){
+    .top_nav{
+        display: none;
+    }
+    .main_container{
+        width: 100%;
+        height: 100%;
+        top:0px;
+    }
+    .main_container .sidebar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 25%;
+        height: 100%;
+        background: #406529;
+        transition: all 0.3s ease;
+    }
+    .main_container .container{
+        margin-top: 0;
+        width: calc(100% - 25%);
+        margin-left: 225px;
+        padding: 30px;
+        transition: all 0.3s ease;
+      }
+    
+}

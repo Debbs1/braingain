@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="top_nav">
+			 <span class="fas fa-bars"></span>
+		</div>
+		<div class="main_container">
+			<div class="sidebar">
+				<div class="profile">
+                        <div class="img">
+                            <img alt="profile picture" src="assets/Avatar.png">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_name"><strong>Deborah Inyang</strong></p>
+                            <p class="sub_info">
+                                <span class="user_role"><strong>Student</span><br>
+                                <span class="refference_code">Refference Code:12345</span><br>
+                                <span class="user_status">Online</span>
+                            </p>
+                        </div>
+                </div>
+                <ul>
+			        <li>
+			          <a href="#" class="feat-btn">Dashboard
+			            <span class="fas fa-caret-down first"></span>
+			          </a>
+			          <ul class="feat-show">
+			            <li><a href="#">My Dashboard</a></li>
+			            <li><a href="#">Educational Games</a></li>
+			          </ul>
+			        </li>
+			        <li>
+			          <a href="#" class="feat-btn">Academics
+			            <span class="fas fa-caret-down first"></span>
+			          </a>
+			          <ul class="feat-show">
+			            <li><a href="#">Skill Practice</a></li>
+			            <li><a href="#">Past Questions</a></li>
+			            <li><a href="#">Past Questions [Exam]</a></li>
+			            <li><a href="#">E-Library</a></li>
+			          </ul>
+			        </li>
+			        <li>
+			          <a href="#" class="feat-btn">Accounts
+			            <span class="fas fa-caret-down first"></span>
+			          </a>
+			          <ul class="feat-show">
+			          	<li><a href="#">Subscription</a></li>
+			            <li><a href="#">Income</a></li>
+			            <li><a href="#">Withdrawals</a></li>
+			            <li><a href="#">Payments</a></li>
+			          </ul>
+			        </li>
+			        <li>
+			          <a href="#" class="feat-btn">Personal
+			            <span class="fas fa-caret-down first"></span>
+			          </a>
+			          <ul class="feat-show">
+			            <li><a href="#">Profile</a></li>
+			            <li><a href="#">Change Password</a></li>
+			            <li><a href="#">Affiliates/Referal</a></li>
+			            <li><a href="#">Question Archives</a></li>
+			            <li><a href="#">Bank Details</a></li>
+			          </ul>
+			        </li>
+			    </ul>
+			</div>
+			<div class="content"></div>
+		</div>
+	</div>
+<style type="text/css">
+	*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Rubik';
+	}
+	.wrapper{
+	    width: 100%;
+	    height: 100%;
+	}
+	.top_nav{
+	    background: #80CBC4;
+	    height: 60px;
+	    display: flex;
+	    position: fixed;
+	    width: 100%;
+	    top: 0;
+	  }
+	.main_container .sidebar{
+	    position: fixed;
+	    top: 60px;
+	    left: 0;
+	    width: 20%;
+	    height: 100%;
+	    background: #406529;
+	    transition: all 0.3s ease;
+	}
+	.main_container .sidebar .profile{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 20px 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+  .main_container ul{
+  background: #406529;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+.main_container ul li{
+  line-height: 60px;
+  border-top: 1px solid #406529;
+}
+.main_container ul li:last-child{
+  border-bottom: 1px solid #406529;
+}
+.main_container ul li a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+.main_container ul li.active a{
+  color: #ffff;
+  background: #406529;
+  border-left-color: #ffff;
+}
+  .main_container ul li a:hover{
+  background: ##406529;
+}
+.main_container ul ul{
+  position: static;
+  display: none;
+}
+.main_container ul .feat-show.show{
+  display: block;
+}
+<script>
+	$('.btn').click(function(){
+      $(this).toggleClass("click");
+      $('.sidebar').toggleClass("show");
+    });
+      $('.feat-btn').click(function(){
+        $('nav ul .feat-show').toggleClass("show");
+        $('nav ul .first').toggleClass("rotate");
+      });
+      $('.serv-btn').click(function(){
+        $('nav ul .serv-show').toggleClass("show1");
+        $('nav ul .second').toggleClass("rotate");
+      });
+      $('nav ul li').click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+      });
+    </script>
+</script>
+</style>
+</body>
+</html>
